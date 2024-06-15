@@ -60,6 +60,7 @@ Load the diabetes dataset, assign input features to 'X,' and target values to 'y
 Create a StandardScaler object for feature scaling.
 Scale (normalize) the input features 'X' using the StandardScaler.
 Split the dataset into training and testing datasets.
+
 ```python
 # Create a StandardScaler object for feature scaling
 scaler = StandardScaler()
@@ -77,7 +78,7 @@ The input features are scaled using StandardScaler, and the dataset has been spl
 # Building and Training the Model
 Define a function build_model that creates a Sequential model with specific architecture.
 Compile the model with mean squared error (MSE) loss and the specified optimizer.
-```
+```python
 X_train.shape[1]
 # Define a function 'build_model' that creates a Sequential model with specific architecture
 def build_model(optimizer):
@@ -106,7 +107,7 @@ It defines a function to build neural network models with different optimizers (
 Evaluate the RMSProp model on the testing data and retrieve MSE and MAE.
 Evaluate the Adadelta model on the testing data and retrieve MSE and MAE.
 Print the MSE and MAE for both models.
-```
+```python
 # Evaluate the RMSprop model on the testing data and retrieve MSE and MAE
 mse_rmsprop, mae_rmsprop = model_rmsprop.evaluate(X_test, y_test, verbose=0)
 
